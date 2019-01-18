@@ -1,4 +1,5 @@
-# IdleBuster
+# IdleBuster 
+![Appveyor Build Status](https://ci.appveyor.com/api/projects/status/github/Macaba/IdleBuster?branch=master&svg=true)
 
 IdleBuster is a Windows Service that will execute an action after the user input (mouse/keyboard) has been idle for a set duration.
 
