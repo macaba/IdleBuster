@@ -16,6 +16,12 @@ Optionally, include a `IdleBuster.json` configuration file alongside `IdleBuster
 
 When the application is run, it'll run silently in the background. The entry in Task Manager is `IdleBuster.exe`.
 
+IdleBuster can run at login for any user, the commands to install or uninstall are:
+
+`IdleBuster.exe install`
+
+`IdleBuster.exe uninstall`
+
 ## Configuration ##
 
 In IdleBuster.json:
