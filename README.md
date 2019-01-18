@@ -9,9 +9,9 @@ IdleBuster is a Windows Service that will execute an action after the user input
 
 ## Installation ##
 
-After build, the only file required from the Bin directory is IdleBuster.exe. 
+After build, the only file required from the Bin directory is `IdleBuster.exe`. 
 
-Optionally, include a IdleBuster.json configuration file. If one is not present on the first run, then a default file will be generated.
+Optionally, include a `IdleBuster.json` configuration file alongside `IdleBuster.exe`. If one is not present on the first run, then a default file will be generated.
 
 ### Command line reference ###
 
