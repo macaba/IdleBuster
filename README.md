@@ -33,7 +33,7 @@ For further detail, see the [Topshelf Command-Line Reference](https://topshelf.r
 
 In IdleBuster.json:
 ```
-{"Timeout":"00:00:10","Action":"Lock"}
+{"Timeout":"00:10:00","Action":"Lock"}
 ```
 
 Timeout parameter is HH:MM:SS. 
