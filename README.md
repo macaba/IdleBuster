@@ -13,21 +13,7 @@ After build, the only file required from the Bin directory is `IdleBuster.exe`.
 
 Optionally, include a `IdleBuster.json` configuration file alongside `IdleBuster.exe`. If one is not present on the first run, then a default file will be generated.
 
-### Command line reference ###
-
-On the command line:
-
-`IdleBuster.exe run` Runs the service from the command line (default)
-
-`IdleBuster.exe install` Installs the service
-
-`IdleBuster.exe start` Starts the service if it is not already running
-
-`IdleBuster.exe stop` Stops the service if it is running
-
-`IdleBuster.exe uninstall` Uninstalls the service
-
-For further detail, see the [Topshelf Command-Line Reference](https://topshelf.readthedocs.io/en/latest/overview/commandline.html).
+When the application is run, it'll run silently in the background. The entry in Task Manager is `IdleBuster.exe`.
 
 ## Configuration ##
 
