@@ -48,4 +48,4 @@ Allowable actions are:
 
 ## Compatibility ##
 
-IdleBuster is built against .NET 4.5, which makes it compatible with Windows 8 upwards with no installation of the .NET framework required. Windows 7 compatibility will require the installation of .NET >= 4.5.
+IdleBuster is built against .NET 4.5, which makes it compatible with Windows 8 upwards with no additional installation of the .NET framework required beyond that included with the OS installation. Windows 7 compatibility will require the installation of .NET >= 4.5.
