@@ -45,3 +45,7 @@ Allowable actions are:
 * Hibernate
 * Shutdown
 * Restart
+
+## More details ##
+
+IdleBuster is built against .NET 4.5, which makes it compatible with Windows 8 upwards with no installation of the .NET framework required. Windows 7 compatibility will require the installation of .NET >= 4.5.
