@@ -22,6 +22,8 @@ IdleBuster can run at login for any user, the commands to install or uninstall a
 
 `IdleBuster.exe uninstall`
 
+Before installing it, place it in a stable location.
+
 ## Configuration ##
 
 In IdleBuster.json:
