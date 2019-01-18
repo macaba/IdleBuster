@@ -4,8 +4,8 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
-using Topshelf;
 
 namespace IdleBuster
 {
@@ -15,7 +15,7 @@ namespace IdleBuster
         {
             var path = new Uri(System.IO.Path.GetDirectoryName(System.Reflection.Assembly.GetExecutingAssembly().GetName().CodeBase)).LocalPath;
             var settingsFile = Path.Combine(path, "IdleBuster.json");
-            if(!File.Exists(settingsFile))
+            if (!File.Exists(settingsFile))
             {
                 var defaultSettings = new Settings();
                 defaultSettings.SetDefaults();
@@ -23,23 +23,11 @@ namespace IdleBuster
             }
             var settings = JsonConvert.DeserializeObject<Settings>(File.ReadAllText(settingsFile));
 
-            var rc = HostFactory.Run(x =>
-            {
-                x.Service<UserInputMonitor>(s =>
-                {
-                    s.ConstructUsing(name => new UserInputMonitor(settings.Timeout, settings.Action));
-                    s.WhenStarted(tc => tc.Start());
-                    s.WhenStopped(tc => tc.Stop());
-                });
-                x.RunAsLocalSystem();
-
-                x.SetDescription("IdleBuster");
-                x.SetDisplayName("IdleBuster");
-                x.SetServiceName("IdleBuster");
-            });
-
-            var exitCode = (int)Convert.ChangeType(rc, rc.GetTypeCode());
-            Environment.ExitCode = exitCode;
+            var cts = new CancellationTokenSource();
+            var monitor = new UserInputMonitor(settings.Timeout, settings.Action);
+            monitor.Start();
+            WaitHandle.WaitAny(new[] { cts.Token.WaitHandle });
+            monitor.Stop();
         }
     }
 }
